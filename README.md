@@ -4,6 +4,9 @@ Sparse-set based ECS for Unity. Simple, flexible and fast.
 
 Core part of architecture that I'm developing for all our future games, **of any scale**.
 
+[![twitter](https://img.shields.io/twitter/follow/_neonage?style=social)](https://twitter.com/_neonage)\
+[![discord online](https://img.shields.io/discord/830405926078644254?label=Open%20Labs&logo=discord&style=social)](https://discord.gg/NrX5TCJ4aq)
+
 ## Features
 * Burst + Jobs direct support
 * Stupendously simple architecture
@@ -14,6 +17,9 @@ Core part of architecture that I'm developing for all our future games, **of any
 * Total control and freedom
 
 Can be used outside of Unity, with a slight modification.
+
+## Examples
+https://user-images.githubusercontent.com/29812914/167914219-6b81ab7f-ecee-4e79-ba83-fa063a8b5672.mp4
 
 ## Motivation? Why yet another ECS!
 Every existing implementation I've seen is utterly overcomplicated, heavy, hard to understand and work with.
@@ -44,6 +50,7 @@ Components are refered to as **Data**
 
 ```csharp
 var world = World.Default;
+     
 // Get the required data pools:
 var gravityPool = world.Pool<CustomGravity>();
 // Loop over smallest pool when querying for multiple types
@@ -57,19 +64,18 @@ for (int i = 0; i < smallestPool.count; i++)
     // ...
 }
 ```
+```csharp
+var entity = world.CreateEntity(); // or world.GetEntity(gameObject)
+world.AddData(entity, new TRS(transform), new SimpleRigidbody());
+```
+
 You can optionally use `ushorts` for IDs with `ENTITY_SHORT_ID` define,\
 We use 0 value instead of -1 for unassigned entities, thus - the [0] data slot is reserved to null entity.
 
-Inherit your system from `SystemBehaviour` and attach it on game-object:
-![SystemBehaviour](https://i.imgur.com/gNZFHmF.png)\
-Note: SystemBehaviour is optional and it only handles the update loop.
-
-Use `GameObjectEntity` to auto-link attached MonoBehaviours:
+Use `GameObjectEntity` to auto-link attached MonoBehaviours:\
 ![GameObjectEntity](https://i.imgur.com/jMPy9vM.png)
 
-
-## Examples
-Simple Physics System via Physics.ComputePenetration()
+Optional: inherit from `SystemBehaviour` and attach it on game-object. It'll use a coroutine update loop.
 
 ## What's Next?
 Make actual games with it.\
@@ -81,15 +87,13 @@ So yeah, I'm eagering to make a 3D Platformer now.\
 I will be sharing the progress on [our discord channel](https://discord.gg/NrX5TCJ4aq).
 
 ## Research (**help wanted!**)
-We need to design a struct-based, ***visual data-oriented*** "State Machine/Behaviour Tree/HTN/GOAP/Planner/**Flow Graph**" hybrid that works with **Jobs**! \
-The idea is to separate Design from Code, provide visual debugging and runtime graph editing (in Editor and Player builds!).
+We need to design a struct-based, ***visual data-oriented*** \
+"State Machine/Behaviour Tree/HTN/GOAP/Planner/**Flow Graph**" hybrid that works with **Jobs**!
 
+The idea is to separate Design from Code, provide visual debugging and runtime graph editing (in Editor and Player builds!).\
 In the same fashion as Ecstasy — simple stupid and powerful.
 
-## Contact
-[![twitter](https://img.shields.io/twitter/follow/_neonage?style=social)](https://twitter.com/_neonage)\
-[![discord online](https://img.shields.io/discord/830405926078644254?label=Open%20Labs&logo=discord&style=social)](https://discord.gg/NrX5TCJ4aq)
-
+## Community
 [![join discord](https://user-images.githubusercontent.com/29812914/121816656-0cb93080-cca7-11eb-954a-344cfd31f530.png)](https://discord.gg/NrX5TCJ4aq)
 
 ## TODO
