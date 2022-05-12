@@ -16,6 +16,9 @@ Core part of architecture that I'm developing for all our future games, **of any
 * Works with any data types
 * Total control and freedom
 
+### Work-in-progress
+* Interfaces support via InterfacePool
+
 Can be used outside of Unity, with a slight modification.
 
 ## Examples
