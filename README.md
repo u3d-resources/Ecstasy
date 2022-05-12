@@ -13,19 +13,20 @@ Core part of architecture that I'm developing for all our future games, **of any
 * As simple as for-loop iteration
 * Data is tightly packed, contiguously per-type
 * No Sync-Points, No Events, No Bitmasks, Barebones!
-* Works with any data types
 * Total control and freedom
 
 Can be used outside of Unity, with a slight modification.
 
 ### Downfalls
-Struct Interfaces are not yet supported, working on it.
+No multiple components of the same type on a single entity.\
+Interfaces and polymorphism (`world.Pool<IBase>`) is not yet supported, I've got an idea and working on it.
 
 The underlying architecture uses pointers to access and change shared data directly.\
 While it is super fast and works perfectly on main-thread,\
-In Jobs, this might circumvent the Safety Systems and cause Race Conditions.\
+In Jobs, this might circumvent the Safety System and cause ***Race Conditions*** when systems read-write on the same data.\
 We need to extensively test this and find a solution.\
 https://docs.unity3d.com/Manual/JobSystemSafetySystem.html
+>Job System solves this by sending each job a copy of the data it needs to operate on, rather than a reference to the data in the control thread. This copy isolates the data, which eliminates the race condition.
 
 ## Examples
 https://user-images.githubusercontent.com/29812914/167914219-6b81ab7f-ecee-4e79-ba83-fa063a8b5672.mp4
