@@ -17,7 +17,7 @@ Core part of architecture that I'm developing for all our future games, **of any
 * Total control and freedom
 
 ### Work-in-progress
-* Interfaces support via InterfacePool
+* Struct Interfaces support via InterfacePool
 
 Can be used outside of Unity, with a slight modification.
 
