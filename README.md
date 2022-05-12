@@ -16,10 +16,16 @@ Core part of architecture that I'm developing for all our future games, **of any
 * Works with any data types
 * Total control and freedom
 
-### Work-in-progress
-* Struct Interfaces support via InterfacePool
-
 Can be used outside of Unity, with a slight modification.
+
+### Downfalls
+Struct Interfaces are not yet supported, working on it.
+
+The underlying architecture uses pointers to access and change shared data directly.\
+While it is super fast and works perfectly on main-thread,\
+In Jobs, this might circumvent the Safety Systems and cause Race Conditions.\
+We need to extensively test this and find a solution.\
+https://docs.unity3d.com/Manual/JobSystemSafetySystem.html
 
 ## Examples
 https://user-images.githubusercontent.com/29812914/167914219-6b81ab7f-ecee-4e79-ba83-fa063a8b5672.mp4
@@ -100,6 +106,7 @@ In the same fashion as Ecstasy — simple stupid and powerful.
 [![join discord](https://user-images.githubusercontent.com/29812914/121816656-0cb93080-cca7-11eb-954a-344cfd31f530.png)](https://discord.gg/NrX5TCJ4aq)
 
 ## TODO
+* Test for Job Safety System and Race Conditions
 * Test interfaces in Jobs
 * Implement Entity **Versioning?** (**!**)
 * Support scenes loading
