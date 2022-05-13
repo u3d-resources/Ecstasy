@@ -5,7 +5,7 @@ Sparse-set based ECS for Unity. Simple, flexible and fast.
 Core part of architecture that I'm developing for all our future games, **of any scale**.
 
 [![twitter](https://img.shields.io/twitter/follow/_neonage?style=social)](https://twitter.com/_neonage)\
-[![discord online](https://img.shields.io/discord/830405926078644254?label=Open%20Labs&logo=discord&style=social)](https://discord.gg/NrX5TCJ4aq)
+[![discord online](https://img.shields.io/discord/830405926078644254?label=Open%20Labs&logo=discord&style=social)](https://discord.gg/uF3sJFMA2j)
 
 ## Features
 * Burst + Jobs direct support
@@ -94,7 +94,7 @@ Emergent & engaging AI, bosses, game flow, world interactions, dynamic soundscap
 Characters ala Mario Odyssey, Zelda BOTW, Sekiro, Jak, It Takes Two.. just to name a few :)
 
 So yeah, I'm eagering to make a 3D Platformer now.\
-I will be sharing the progress on [our discord channel](https://discord.gg/NrX5TCJ4aq).
+I will be sharing the progress on [our discord channel](https://discord.gg/uF3sJFMA2j).
 
 ## Research (**help wanted!**)
 We need to design a struct-based, ***visual data-oriented*** \
@@ -104,7 +104,7 @@ The idea is to separate Design from Code, provide visual debugging and runtime g
 In the same fashion as Ecstasy — simple stupid and powerful.
 
 ## Community
-[![join discord](https://user-images.githubusercontent.com/29812914/121816656-0cb93080-cca7-11eb-954a-344cfd31f530.png)](https://discord.gg/NrX5TCJ4aq)
+[![join discord](https://user-images.githubusercontent.com/29812914/121816656-0cb93080-cca7-11eb-954a-344cfd31f530.png)](https://discord.gg/uF3sJFMA2j)
 
 ## TODO
 * Test for Job Safety System and Race Conditions
